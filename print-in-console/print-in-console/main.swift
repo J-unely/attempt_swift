@@ -59,3 +59,56 @@ for char in sth.reversed() {
     print(char, terminator: "")
 }
 print() //1줄 개행
+
+
+/* 복잡해진 시도들 흔적
+ 
+ //변수,상수
+ var peperoBody: String = String()
+ let baseMenu: [String] = ["***", "|0|"]
+ let plusMenu: [String] = [" ", "&", "#", "*"]
+ let stick: String = "| |"
+ 
+ 
+var toppingOdd = "***"
+toppingOdd.insert("#", at: toppingOdd.startIndex)
+toppingOdd.insert(" ", at: toppingOdd.endIndex)
+print(toppingOdd)
+var toppingEven = "***"
+toppingOdd.insert("#", at: toppingOdd.startIndex)
+toppingOdd.insert(" ", at: toppingOdd.endIndex)
+print(toppingOdd)
+
+let peperoLayor = print(peperoDeco + peperoCore + peperoDeco)
+
+func makePeperoLayor() {
+    /*print("\(peperoDeco), \(peperoCore), \(peperoDeco)")*/
+    return peperoDeco + peperoCore + peperoDeco
+}
+
+func makePeperoLayorOdd() {
+    return peperoDeco + peperoCore + " "
+}
+
+func makePeperoLayorEven() {
+    return " " + peperoCore + peperoDeco
+}
+
+func makePeperoLayors() {
+    let peperoCore =
+    let peperoDeco =
+    let basicLayor = peperoDeco + peperoCore + peperoDeco
+    let customLayorOdd = peperoDeco + peperoCore + " "
+    let customLayorEven = " " + peperoCore + peperoDeco
+    if (peperoStick,peperoDeco) = ("basic","none") {
+        
+    }else
+}
+
+func makeFinalPepero(size peperoHeight: (mainHeight: Int, stickHeight: Int), type peperoStick: String, deco peperoDeco: String) -> String {
+    let givePepero "주문하신 \(peperoHeight[1])사이즈 \(peperoDeco) \(peperoStick)빼빼로 나왔습니다~"
+    let
+}
+
+makeFinalPepero(size: <#T##[Int]#>, type: <#T##String#>, deco: <#T##String#>)
+*/
