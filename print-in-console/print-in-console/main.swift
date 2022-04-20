@@ -7,18 +7,38 @@
 
 import Foundation
 
-let one = "하나"
-let two = "둘"
-let three = "셋"
+let deco = "#"
+let (basic, nude) = ("***","|0|")
+let spare = " "
 
-let halfOdd = one + two + three
-let halfEven = three + two + one
+//let half = one + two + three
+//let whole = one + two + three + "\n" + one + two + three
 
-let (heightA, heightB) = (8, 3)
+//print(half)
+//print()
+//print(whole)
 
-for _ in 1...heightA / 2 {
-    print(halfOdd, halfEven, separator: "\n")
+let halfOdd = deco + basic + spare
+let halfEven = spare + basic + deco
+
+//let (heightA, heightB) = (8, 3)
+
+func please(sweetLong heightA: Int, stickLong heightB: Int) {
+    if heightA % 2 == 0 {
+        for _ in 1...heightA / 2 {
+            print(halfOdd, halfEven, separator: "\n")
+        }
+    }
+    else if heightA % 2 != 0 {
+        for _ in 1...heightA / 2 {
+            print(halfOdd, halfEven, separator: "\n")
+        }
+        print(halfOdd)
+    }
+    for _ in 1...heightB {
+        print(" | | ")
+    }
 }
-for _ in 1...heightB {
-    print(" | | ")
-}
+
+
+please(sweetLong: 8, stickLong: 3)
