@@ -11,9 +11,14 @@ let one = "하나"
 let two = "둘"
 let three = "셋"
 
-let half = one + two + three
-let whole = one + two + three + "\n" + one + two + three
+let halfOdd = one + two + three
+let halfEven = three + two + one
 
-print(half)
-print()
-print(whole)
+let (heightA, heightB) = (8, 3)
+
+for _ in 1...heightA / 2 {
+    print(halfOdd, halfEven, separator: "\n")
+}
+for _ in 1...heightB {
+    print(" | | ")
+}
