@@ -31,6 +31,16 @@ func please(sweetLong heightA: Int, stickLong heightB: Int) {
 please(sweetLong: 8, stickLong: 3)
 
 
+
+//막대 밑동에 대한 함수 분리: 총괄함수 내부에 넣을 것이므로 인수 안 받아도 ok ...지만 서로 다른 인자를 받는 동명의 함수가 양립 가능하므로 일단 표기는 함
+func makePeperoStick(heightB: Int) {
+    for _ in 1...heightB {
+        print(" | | ")
+    }
+}
+
+
+
 //시도: dictionary 형태로 별칭 대응
 var decoOrder:[String:String] = ["none":" ", "crunch":"*", "almond":"#"]
 let decos = decoOrder.keys
