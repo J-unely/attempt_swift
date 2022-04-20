@@ -15,5 +15,5 @@ let half = one + two + three
 let whole = one + two + three + "\n" + one + two + three
 
 print(half)
-print()
+print() 
 print(whole)
