@@ -11,10 +11,10 @@ let (none, crunch, almond, spare) = (" ", "#", "&", " ")
 let (basic, nude) = ("***","|0|")
 
 var 타입: String
-var 몸통: String
+//var 몸통: String
 
 var 옵션: String
-var 데코: String
+//var 데코: String
 
 func please(sweetLong heightA: Int, stickLong heightB: Int, 타입: String, 옵션: String){
     let halfOdd = 옵션 + 타입 + spare
