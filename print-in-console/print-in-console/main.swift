@@ -6,34 +6,37 @@
 //
 
 import Foundation
+print("""
+---------------------------------------------
+ ♥︎  빼빼로 종류(type): basic | nude
+ ♥︎  빼빼로 토핑(option): none | crunch | almond
+---------------------------------------------
+""")
 
-let (none, crunch, almond, spare) = (" ", "#", "&", " ")
+let (none, crunch, almond, air) = (" ", "#", "&", " ")
 let (basic, nude) = ("***","|0|")
 
-var 타입: String
-//var 몸통: String
+var peperoType: String
+var peperoOption: String
 
-var 옵션: String
-//var 데코: String
 
-func please(want 타입: String, with 옵션: String, sizeOf length: (heightA: Int, heightB: Int)){
-    let halfOdd = 옵션 + 타입 + spare
-    let halfEven = spare + 타입 + 옵션
-    if length.heightA % 2 == 0 {
-        for _ in 1...length.heightA / 2 {
-            print(halfOdd, halfEven, separator: "\n")
+func buildPepero(want peperoType: String, with peperoOption: String, sizeOf peperoLength: (sweet: Int, stick: Int)){
+    let peperoLayorOdd = peperoOption + peperoType + air
+    let peperoLayorEven = air + peperoType + peperoOption
+    if peperoLength.sweet % 2 == 0 {
+        for _ in 1...peperoLength.sweet / 2 {
+            print(peperoLayorOdd, peperoLayorEven, separator: "\n")
         }
     }
-    else if length.heightA % 2 != 0 {
-        for _ in 1...length.heightA / 2 {
-            print(halfOdd, halfEven, separator: "\n")
+    else if peperoLength.sweet % 2 != 0 {
+        for _ in 1...peperoLength.sweet / 2 {
+            print(peperoLayorOdd, peperoLayorEven, separator: "\n")
         }
-        print(halfOdd)
+        print(peperoLayorOdd)
     }
-    for _ in 1...length.heightB {
+    for _ in 1...peperoLength.stick {
         print(" | | ")
     }
 }
 
-//please(want: basic, with: crunch, sizeIs: 8, stickIs: 3)
-please(want: basic, with: crunch, sizeOf: (heightA: 8, heightB: 3))
+buildPepero(want: basic, with: crunch, sizeOf: (sweet: 11, stick: 3))
