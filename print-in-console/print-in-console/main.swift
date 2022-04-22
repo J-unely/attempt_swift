@@ -16,7 +16,7 @@ var 타입: String
 var 옵션: String
 //var 데코: String
 
-func please(sweetLong heightA: Int, stickLong heightB: Int, 타입: String, 옵션: String){
+func please(want 타입: String, with 옵션: String, sizeIs heightA: Int, stickIs heightB: Int){
     let halfOdd = 옵션 + 타입 + spare
     let halfEven = spare + 타입 + 옵션
     if heightA % 2 == 0 {
@@ -35,28 +35,4 @@ func please(sweetLong heightA: Int, stickLong heightB: Int, 타입: String, 옵�
     }
 }
 
-please(sweetLong: 9, stickLong: 3, 타입: nude, 옵션: crunch)
-
-
-
-
-
-//    switch 타입{
-//    case "basic":
-//        몸통 = "***"
-//    case "nude":
-//        몸통 = "|0|"
-//    default:
-//        몸통 = "***"
-//    }
-//
-//    switch 옵션{
-//    case "none":
-//        데코 = " "
-//    case "crunch":
-//        데코 = "*"
-//    case "almond":
-//        데코 = "#"
-//    default:
-//        데코 = " "
-//    }
+please(want: basic, with: crunch, sizeIs: 8, stickIs: 3)
