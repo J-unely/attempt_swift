@@ -15,20 +15,26 @@ var (deco, spare) = (" ", " ")      //토핑옵션
 //let halfEven = spare + basic + deco
 
 //let (heightA, heightB) = (8, 3)
-/*
-func please(sweetLong heightA: Int, stickLong heightB: Int) {
-    for _ in 1...heightA / 2 {
-        print(halfOdd, halfEven, separator: "\n")
-    }
-    if heightA % 2 != 0 {
-        print(halfOdd)
-    }
-    for _ in 1...heightB {
-        print(" | | ")
-    }
-}
 
-please(sweetLong: 8, stickLong: 3)
+//func please(sweetLong heightA: Int, stickLong heightB: Int, type peperoStick: String, option peperoDeco: String) {
+//    let types: [String:String] = ["basic":"***", "nude":"|0|"]
+//    let options: [String:String] = ["none":" ", "crunch":"*", "almonde":"#"]
+//    let stick: String = types["\(peperoStick)"]!
+//    let deco: String = options["\(peperoDeco)"]!
+//    let oddLayor: String = deco + stick + spare
+//    let evenLayor: String = spare + stick + deco
+//    for _ in 1...heightA / 2 {
+//        print(oddLayor, evenLayor, separator: "\n")
+//    }
+//    if heightA % 2 != 0 {
+//        print(oddLayor)
+//    }
+//    for _ in 1...heightB {
+//        print(" | | ")
+//    }
+//}
+//
+//please(sweetLong: 8, stickLong: 3, type: basic, option: almond)
 
 
 
@@ -37,39 +43,31 @@ func makePeperoStick(heightB: Int) {
         print(" | | ")
     }
 }
-*/
+
 ////////////////////////////
 ///<Default Info.>
 var peperoBodyLength = 6
-var types: [String:String] = ["basic":"***", "nude":"|0|"]
-var options: [String:String] = ["none":" ", "crunch":"*", "almonde":"#", "jumbo":"*"]
+var types: [String: String] = ["basic": "***", "nude":"|0|"]
+var options: [String: String] = ["none": " ", "crunch":"*", "almond":"#"]
 var peperoHolderLength = 4
 
-let sampleValue: String = types["nude"]!
-print(sampleValue)
+var basic: String = "***"
+var nude: String = "|0|"
+var none: String = " "
+var crunch: String = "*"
+var almond: String = "#"
 
-func makePeperoLayor(type peperoStick: String, option peperoDeco: String) -> String {
-    if peperoStick == "nude" {
-        let stick = "|0|"
-        let oddLayor: String = deco + stick + spare
-        let evenLayor: String = spare + stick + deco
-        print(oddLayor, evenLayor, separator: "\n")
-    } else if peperoStick == "basic" {
-        let stick = "***"
-        switch peperoDeco{
-        case "none": deco = " " //인수 미입력해도 함수 출력 되는지 몰라서 일단 넣음
-        case "crunch": deco = "*"
-        case "almond": deco = "#"
-        case "jumbo": deco = "*"; spare = "*"
-        default: deco = " "
-        }
+func makePeperoLayor(type peperoStick: String, option peperoDeco: String) {
+        let stick: String = types["\(peperoStick)"]!
+        let deco: String = options["\(peperoDeco)"]!
         let oddLayor: String = deco + stick + spare
         let evenLayor: String = spare + stick + deco
         print(oddLayor, evenLayor, separator: "\n")
     }
-    return "o"
-}
-//print(stick)
+
+makePeperoLayor(type: nude, option: none)
+// 상수/변수 범위가 함수 내부에 한정 - dictionary 내 '요소'는 '선언된 변수/상수'와는 다른 개념, nil 알아보기
+
 
 /*
 func makePeperoBody(type peperoStick: String, option peperoDeco: String, size peperoSize: Int) {
