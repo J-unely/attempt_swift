@@ -7,13 +7,18 @@
 
 import Foundation
 
-let (deco, spare) = (" ", " ")
+let (none, crunch, almond, spare) = (" ", "#", "&", " ")
 let (basic, nude) = ("***","|0|")
 
-let halfOdd = deco + basic + spare
-let halfEven = spare + basic + deco
+var 타입: String = "basic"
+var 몸통: String = "|||"
 
-func please(sweetLong heightA: Int, stickLong heightB: Int) {
+var 옵션: String = "none"
+var 데코: String = String(" ")
+
+func please(sweetLong heightA: Int, stickLong heightB: Int, 타입: String, 옵션: String){
+    let halfOdd = 옵션 + 타입 + spare
+    let halfEven = spare + 타입 + 옵션
     if heightA % 2 == 0 {
         for _ in 1...heightA / 2 {
             print(halfOdd, halfEven, separator: "\n")
@@ -30,4 +35,28 @@ func please(sweetLong heightA: Int, stickLong heightB: Int) {
     }
 }
 
-please(sweetLong: 9, stickLong: 3)
+please(sweetLong: 9, stickLong: 3, 타입: nude, 옵션: crunch)
+
+
+
+
+
+//    switch 타입{
+//    case "basic":
+//        몸통 = "***"
+//    case "nude":
+//        몸통 = "|0|"
+//    default:
+//        몸통 = "***"
+//    }
+//
+//    switch 옵션{
+//    case "none":
+//        데코 = " "
+//    case "crunch":
+//        데코 = "*"
+//    case "almond":
+//        데코 = "#"
+//    default:
+//        데코 = " "
+//    }
